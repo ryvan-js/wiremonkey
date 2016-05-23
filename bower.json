@@ -1,0 +1,21 @@
+{
+    "name": "wiremonkey",
+    "description": "A javascript realtime internet connection tracker and notfier",
+    "version": "1.0.0",
+	"ignore": [
+        "src",
+        "node_modules",
+        ".bowerrc",
+        ".gitignore",
+        ".jshintignore",
+        ".jshintrc",
+        "npm-debug.log",
+        "Gruntfile.js",
+        "Gruntfile.js.save",
+        "package.json"
+    ]
+}
+
+
+
+
