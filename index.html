@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+	<title>WireMonkey</title>
+	<meta name='viewport' content="width=device-width,initial-scale=1.0">
+	<meta author = "Ryvan Prabhu">
+	<link href='dist/css/wiremonkey.css' rel='stylesheet'>
+	
+<style>
+	body,html{
+		margin:0;
+		padding:0;
+		height: 100%;
+		background-color: #81B9EA;
+	}
+	.container{
+			box-shadow: 1px 1px 10px #2D2D2D;
+			font-family: 'Ubuntu', sans-serif;
+			color:white;
+			text-align: center;
+			text-shadow: 1px 1px 4px #007dae;
+		    margin: auto;
+		    padding: 20px;
+		    background: #76CAFF;
+		    height: 100%;
+		    width: 60%;
+		    display: block;
+		    position: static;
+		    overflow: auto;
+	}
+	.container h1{
+		color: rgb(47, 161, 220);
+	    font-size: 50px;
+	    text-shadow: rgb(186, 226, 255) 1px 1px 0px;
+	}
+
+	.container .author {
+		margin-top: 70px;
+		display: inline-block;
+		color: rgb(47, 161, 220);
+	    font-size: 30px;
+	    text-shadow: rgb(186, 226, 255) 1px 1px 0px;
+	}
+	button {
+		width: 100px;
+		height: 100px;
+		border:none;
+		background:url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNjEyIDYxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjEyIDYxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnIGlkPSJjbG91ZC1vZmYiPgoJCTxwYXRoIGQ9Ik00OTQuNywyMjkuNWMtMTcuODUxLTg2LjctOTQuMzUxLTE1My0xODguNy0xNTNjLTM4LjI1LDAtNzMuOTUsMTAuMi0xMDIsMzAuNmwzOC4yNSwzOC4yNSAgICBjMTcuODUtMTIuNzUsNDAuOC0xNy44NSw2My43NS0xNy44NWM3Ni41LDAsMTQwLjI1LDYzLjc1LDE0MC4yNSwxNDAuMjV2MTIuNzVoMzguMjVjNDMuMzUsMCw3Ni41LDMzLjE1LDc2LjUsNzYuNSAgICBjMCwyOC4wNS0xNS4zLDUzLjU1LTQwLjgsNjYuM2wzOC4yNSwzOC4yNUM1OTEuNiw0MzguNiw2MTIsNDAwLjM1LDYxMiwzNTdDNjEyLDI5MC43LDU1OC40NSwyMzQuNiw0OTQuNywyMjkuNXogTTc2LjUsMTA5LjY1ICAgIGw3MS40LDY4Ljg1QzY2LjMsMTgzLjYsMCwyNDkuOSwwLDMzMS41YzAsODQuMTUsNjguODUsMTUzLDE1MywxNTNoMjk4LjM1bDUxLDUxbDMzLjE1LTMzLjE1TDEwOS42NSw3Ni41TDc2LjUsMTA5LjY1eiAgICAgTTE5Ni4zNSwyMjkuNWwyMDQsMjA0SDE1M2MtNTYuMSwwLTEwMi00NS45LTEwMi0xMDJjMC01Ni4xLDQ1LjktMTAyLDEwMi0xMDJIMTk2LjM1eiIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=) no-repeat center transparent;
+			background-size:100% 100%;
+	}
+
+	button:focus {outline:0;}
+	button:active{
+		outline:none;
+		border:none;
+	}
+
+	button.connect{
+		background:url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0MzYuMTI3IDQzNi4xMjciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQzNi4xMjcgNDM2LjEyNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxMjhweCIgaGVpZ2h0PSIxMjhweCI+CjxwYXRoIGQ9Ik0zNTAuMzU5LDE5MS4wMTZjLTcuODE0LTY2LjEzMy02NC4wNjItMTE3LjQzMS0xMzIuMjk2LTExNy40MzFTOTMuNTgxLDEyNC44ODMsODUuNzY4LDE5MS4wMTYgIEMzOC40MDIsMTkxLjAxNiwwLDIyOS40MTMsMCwyNzYuNzc5YzAsNDcuMzY2LDM4LjM5Nyw4NS43NjMsODUuNzYzLDg1Ljc2M2gyNjQuNjAxYzQ3LjM2NiwwLDg1Ljc2My0zOC4zOTcsODUuNzYzLTg1Ljc2MyAgQzQzNi4xMjcsMjI5LjQxMywzOTcuNzI1LDE5MS4wMTYsMzUwLjM1OSwxOTEuMDE2eiIgZmlsbD0iI0ZGRkZGRiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K) no-repeat center;
+			background-size:100% 100%;
+			
+	}
+
+	button.disconnect{
+		
+	}
+
+</style>
+</head>
+	
+	<div class='container'>
+	<h1>Wiremonkey</h1>
+	<p>Wiremonkey is a independant javascript plugin which will monitor the  browser's internet connection in realtime and will notify the users if an error dignosed with it.</p>
+	<p><button id='btn_test' class='connect'></button></p>
+	<h4>Click On The Cloud To Pretend Offline!</h4>
+	<i>or</i>
+	<h4>Disconnect Your Internet Connection</h4>
+	<span class='author'>By Ryvan Prabhu</span>
+	</div>
+	<script src='dist/wiremonkey.js' type="text/javascript"></script>
+	<script>
+	
+
+	window.onload = function(){
+		WM.init();
+
+		//demo purpose
+		document.querySelector('#btn_test').addEventListener('click',function(){
+			if(this.className === "connect"){
+				this.className='';
+				WM.onDisconnect();
+			}else{
+				WM.onConnect();
+				setTimeout(function(){
+					WM.conf.WmElement.className = WM.conf.WmElement.className +" "+ WM.conf.classSlideOut;
+				},1000);
+				setTimeout(function(){
+					WM.conf.WmElement.className='wm_container';
+				},1500);
+				this.className='connect';
+			}
+
+		});
+
+	}
+	</script>
+</body>
