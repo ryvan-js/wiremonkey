@@ -1,3 +1,12 @@
+/*wiremonkey
+
+A realtime internet connection tracker and notifier
+
+Version:0.1.0
+Author:Ryvan Prabhu @ 2016
+Git:http://github/ryvan-js
+*/
+
 (function() {
 
 	var WireMonkey = window.WireMonkey || {};
@@ -96,7 +105,7 @@
 	}
 
 
-	window.WM = new WireMonkey();
+	window.WireMonkey = new WireMonkey();
 	
     //console.log( WM );
 }());

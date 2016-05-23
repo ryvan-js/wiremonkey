@@ -81,20 +81,20 @@
 	
 
 	window.onload = function(){
-		WM.init();
+		WireMonkey.init();
 
 		//demo purpose
 		document.querySelector('#btn_test').addEventListener('click',function(){
 			if(this.className === "connect"){
 				this.className='';
-				WM.onDisconnect();
+				WireMonkey.onDisconnect();
 			}else{
-				WM.onConnect();
+				WireMonkey.onConnect();
 				setTimeout(function(){
-					WM.conf.WmElement.className = WM.conf.WmElement.className +" "+ WM.conf.classSlideOut;
+					WireMonkey.conf.WmElement.className = WireMonkey.conf.WmElement.className +" "+ WireMonkey.conf.classSlideOut;
 				},1000);
 				setTimeout(function(){
-					WM.conf.WmElement.className='wm_container';
+					WireMonkey.conf.WmElement.className='wm_container';
 				},1500);
 				this.className='connect';
 			}
