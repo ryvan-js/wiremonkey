@@ -1,4 +1,4 @@
-/*wiremonkey
+/*wiremonkey js
 
 A realtime internet connection tracker and notifier
 

@@ -2,6 +2,7 @@
     "name": "wiremonkey",
     "description": "A javascript realtime internet connection tracker and notfier",
     "version": "1.0.0",
+    "authors":"Ryvan Prabhu",
 	"ignore": [
         "src",
         "node_modules",
