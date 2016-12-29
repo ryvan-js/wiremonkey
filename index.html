@@ -4,7 +4,7 @@
 	<meta name='viewport' content="width=device-width,initial-scale=1.0">
 	<meta author = "Ryvan Prabhu">
 	<link href='dist/css/wiremonkey.css' rel='stylesheet'>
-	
+
 <style>
 	body,html{
 		margin:0;
@@ -57,16 +57,16 @@
 	button.connect{
 		background:url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0MzYuMTI3IDQzNi4xMjciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQzNi4xMjcgNDM2LjEyNzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxMjhweCIgaGVpZ2h0PSIxMjhweCI+CjxwYXRoIGQ9Ik0zNTAuMzU5LDE5MS4wMTZjLTcuODE0LTY2LjEzMy02NC4wNjItMTE3LjQzMS0xMzIuMjk2LTExNy40MzFTOTMuNTgxLDEyNC44ODMsODUuNzY4LDE5MS4wMTYgIEMzOC40MDIsMTkxLjAxNiwwLDIyOS40MTMsMCwyNzYuNzc5YzAsNDcuMzY2LDM4LjM5Nyw4NS43NjMsODUuNzYzLDg1Ljc2M2gyNjQuNjAxYzQ3LjM2NiwwLDg1Ljc2My0zOC4zOTcsODUuNzYzLTg1Ljc2MyAgQzQzNi4xMjcsMjI5LjQxMywzOTcuNzI1LDE5MS4wMTYsMzUwLjM1OSwxOTEuMDE2eiIgZmlsbD0iI0ZGRkZGRiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K) no-repeat center;
 			background-size:100% 100%;
-			
+
 	}
 
 	button.disconnect{
-		
+
 	}
 
 </style>
 </head>
-	
+
 	<div class='container'>
 	<h1>Wiremonkey</h1>
 	<p>Wiremonkey is a independant javascript plugin which will monitor the  browser's internet connection in realtime and will notify the users if an error dignosed with it.</p>
@@ -78,10 +78,18 @@
 	</div>
 	<script src='dist/wiremonkey.js' type="text/javascript"></script>
 	<script>
-	
+
 
 	window.onload = function(){
 		WireMonkey.init();
+
+		WireMonkey.on('connected', function(){
+		  console.log('Your connection is alived.');
+		});
+		
+		WireMonkey.on('disconnected', function(){
+		  console.log('You are disconnected from internet.');
+		});
 
 		//demo purpose
 		document.querySelector('#btn_test').addEventListener('click',function(){
