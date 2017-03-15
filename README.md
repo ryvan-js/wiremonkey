@@ -1,16 +1,31 @@
 # wiremonkey JS
 A javascript realtime internet connection tracker and notifier.
 
-#Demo
+# Demo
 http://ryvan-js.github.io/
 
-####Dependencies
+#### Dependencies
 Works With Any Modern Broser
 
-####Initialization
+#### Initialization
 
 ```javascript
 WireMonkey.init();
+```
+
+#### Event Handlers
+#added by pyaesone
+
+```javascript
+WireMonkey.on("connected"){
+  //Your functions;
+}
+
+WireMonkey.on("disconnected"){
+  //Your functions;
+}
+
+
 ```
 
 
