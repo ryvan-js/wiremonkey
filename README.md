@@ -14,17 +14,17 @@ WireMonkey.init();
 ```
 
 #### Event Handlers
-#added by pyaesone
 
 ```javascript
-WireMonkey.on("connected"){
+WireMonkey.on("connected",function(){
   //Your functions;
-}
+});
 
-WireMonkey.on("disconnected"){
+WireMonkey.on("disconnected",function(){
   //Your functions;
-}
+});
 
+#credits: pyaesone
 
 ```
 
