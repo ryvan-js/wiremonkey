@@ -24,7 +24,7 @@ WireMonkey.on("disconnected",function(){
   //Your functions;
 });
 
-#credits: pyaesone
+#event handler added by: pyaesone
 
 ```
 
