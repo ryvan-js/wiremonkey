@@ -13,20 +13,7 @@ Works With Any Modern Broser
 WireMonkey.init();
 ```
 
-#### Event Handlers
 
-```javascript
-WireMonkey.on("connected",function(){
-  //Your functions;
-});
-
-WireMonkey.on("disconnected",function(){
-  //Your functions;
-});
-
-#event handler added by: pyaesone
-
-```
 
 
 #### License
