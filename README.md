@@ -15,12 +15,10 @@ WireMonkey.init();
  #### Event Handlers
  
  ```javascript
-WireMonkey.on("connected"){
 WireMonkey.on("connected",function(){
   //Your functions;
 }
 });
- WireMonkey.on("disconnected"){
 WireMonkey.on("disconnected",function(){
   //Your functions;
 }
