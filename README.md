@@ -27,7 +27,22 @@ WireMonkey.on("disconnected",function(){
 WireMonkey.init(); //initialize the script
  ```
 
+#### Event Handlers
 
+ ```javascript
+WireMonkey.on("connected"){
+WireMonkey.on("connected",function(){
+  //Your functions;
+}
+});
+ WireMonkey.on("disconnected"){
+WireMonkey.on("disconnected",function(){
+  //Your functions;
+}
+});
+
+WireMonkey.init(); // initialize the script.
+```
 
 #### License
 
